@@ -1,0 +1,21 @@
+definition:PLCREDI
+definition_id:xyz123
+rules:
+    ANY TASK FROM TASK T300 TO TASK T300.A
+        IS FULFILLED BY
+            (TASK T4.A OR (TASK T5.A OR TASK T4.A) OR (TASK T2 AND TASK T4)) OR TASK T50.1
+    ANY TASK FROM TASK T3 TO TASK T3.A
+        IS FULFILLED BY
+            (TASK T4.A AND TASK T5.A) AND TASK T50.1
+    TASK T1
+        IS FULFILLED BY
+            TASK T2.A OR TASK T9.A
+    TASK T6
+        IS FULFILLED BY
+            TASK T4.A OR TASK T5.A
+    TASK T7
+        IS FULFILLED BY
+            TASK T4.A
+    TASK T10
+        IS FULFILLED BY
+            TASK T11.A AND TASK T12.A
