@@ -38,7 +38,7 @@ export class TaskEvaluator extends Object {
             'T10': true,
             'T4.A': true,
             'T5.A': true,
-            'T50.1': false,
+            'T50.1': true,
             'T2': true,
             'T4': true
         }

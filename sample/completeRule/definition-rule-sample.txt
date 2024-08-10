@@ -1,4 +1,4 @@
-definition:PLCREDI
+definition:flowdefn
 definition_id:xyz123
 rules:
     ANY TASK FROM TASK T300 TO TASK T300.A
