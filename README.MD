@@ -191,7 +191,8 @@ Here, you can see that the expressions declared in the rules are being evaluated
 
 ```javascript
 // Visit a parse tree produced by EvaluateRuleParser#expr.
-visitExpr(ctx) {
+visitExpr(ctx)
+{
     let logical_operator = undefined;
 
     if (ctx.AND && ctx.AND()) {
@@ -225,19 +226,20 @@ tree, we could simply load its value from some external source. For e.g. in a re
 a database table, which contains the records of task execution.
 
 ```javascript
-visitKey_value_rule(ctx) {
+visitKey_value_rule(ctx) 
+{
     let task_token = '' + ctx.TEXT()
     return this._taskEvaluator.evaluate(task_token);
 }
 ```
 For the sake of resolving tasks and illustrating the same I have mocked the values for these tasks in the following file.
-[taskRangeProvider.js](src%2Fprovider%2FtaskRangeProvider.js)
+[taskRangeProvider.js](src/provider/taskRangeProvider.js)
 
 ### Testing the code
 
 #### Running single rule file
 
-[app-evalulator.js](src%2Fapp-evalulator.js) has the following code through which a single rule could be evaluated.
+[app-evalulator.js](src/app-evalulator.js) has the following code through which a single rule could be evaluated.
 
 ```javascript
 import * as fs from 'fs';
@@ -274,7 +276,7 @@ readFile();
 Here, one could alter the values for tasks in the taskRangeProvider.js file in evaluation_table and could see the result
 
 #### Running multiple rule file
-In case, you are looking for how the heirarchy of expressions are evaluated then run [app-execution.js](src%2Fapp-execution.js)
+In case, you are looking for how the heirarchy of expressions are evaluated then run [app-execution.js](src/app-execution.js)
 
 ```text
 Definition flowdefn
